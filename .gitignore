@@ -1,46 +1,14 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# ignorar librerias en node_modules
+node_modules/
 
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
+# ignorar directorio descriptivo de webstorm
+.idea/
 
-# dependencies
-/node_modules
+# ignorar direcotrio de distribucion
+dist/
 
-# profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
+# ignorar directorio de compilacion de documentacion compodoc
+documentation/
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
-
-# System Files
-.DS_Store
-Thumbs.db
+# ignorar archivo de configuracion del package.json
+package-lock.json
