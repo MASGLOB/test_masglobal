@@ -1,0 +1,8 @@
+<cdk-virtual-scroll-viewport class="example-viewport" [itemSize]="movies.length">
+  <dl class="example-dl">
+    <ng-container *cdkVirtualFor="let movie of movies" (click)="selectMovie(movie)">
+      <dt class="example-dt">{{movie.title}}</dt>
+      <dd class="example-dd">Release Date: {{movie.relese | date: 'dd/MM/yyyy'}}</dd>
+    </ng-container>
+  </dl>
+</cdk-virtual-scroll-viewport>

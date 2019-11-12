@@ -17,6 +17,10 @@ import { TopFiveComponent } from './layout/pages/top-five/top-five.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MoviesService} from './service/movies.service';
 import {MatGridListModule} from '@angular/material';
+import {HomeMovieSelected} from './observable/homeMovieSelected';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { ListMoviesComponent } from './layout/pages/home/list-movies/list-movies.component';
+import { InfoMovieComponent } from './layout/pages/home/info-movie/info-movie.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import {MatGridListModule} from '@angular/material';
     LayoutComponent,
     AddMovieComponent,
     HomeComponent,
-    TopFiveComponent
+    TopFiveComponent,
+    ListMoviesComponent,
+    InfoMovieComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +44,12 @@ import {MatGridListModule} from '@angular/material';
     MatListModule,
     HttpClientModule,
     MatGridListModule,
+    ScrollingModule,
   ],
-  providers: [MoviesService],
+  providers: [
+    MoviesService,
+    HomeMovieSelected,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

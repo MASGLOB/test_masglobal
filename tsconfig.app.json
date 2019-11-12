@@ -9,7 +9,8 @@
       "@GlobalInterface": ["src/app/interfaces"],
       "@GlobalUtilities": ["src/app/utilities"],
       "@GlobalService": ["src/app/service"],
-      "@GlobalConst": ["src/app/const"]
+      "@GlobalConst": ["src/app/const"],
+      "@GlobalObservable": ["src/app/observable"]
     }
   },
   "include": [
