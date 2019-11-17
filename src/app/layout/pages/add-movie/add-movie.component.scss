@@ -42,3 +42,10 @@ mat-form-field{
   display: flex;
   flex-direction: row;
 }
+
+@media (max-width: 750px) {
+  .data {
+    flex-direction: column;
+  }
+  img {display: block}
+}

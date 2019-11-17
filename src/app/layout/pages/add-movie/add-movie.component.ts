@@ -33,7 +33,7 @@ export class AddMovieComponent implements OnInit {
     });
   }
 
-  onFormSubmit(form: NgForm) {
+  onFormSubmit(form) {
     if (form.status === 'VALID') {
       const data = this.movieForm.getRawValue();
       try {
@@ -43,7 +43,6 @@ export class AddMovieComponent implements OnInit {
         alert(`Error at Saving Movie : ${e}`);
       }
     }
-    console.log(form);
   }
 
   onImage(event): void {
