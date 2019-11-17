@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MovieConst} from './const/movieConst';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'movieapp';
+  title = MovieConst.appNAme;
 }

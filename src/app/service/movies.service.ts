@@ -43,7 +43,8 @@ export class MoviesService {
     return movies.find(m => m.title.toUpperCase() === title.toUpperCase()) || {};
   }
 
-  getTopFive() {
-    this.http.get(MovieConst.topFiveUrl).pipe(timeout(MovieConst.timeOut));
+  async getTopFive() {
+    const objTop = await this.http.get(MovieConst.topFiveUrl).pipe(timeout(MovieConst.timeOut)).toPromise();
+    return Object.values(objTop)[0];
   }
 }

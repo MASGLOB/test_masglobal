@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Movie} from '../../../interfaces/movie';
+import {MoviesService} from '../../../service/movies.service';
 
 @Component({
   selector: 'app-top-five',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-five.component.scss']
 })
 export class TopFiveComponent implements OnInit {
-
-  constructor() { }
+  movies: Movie[];
+  constructor(
+    private movieService: MoviesService,
+  ) { }
 
   ngOnInit() {
+    this.getTopFive();
+  }
+
+  async getTopFive() {
+    this.movies = await this.movieService.getTopFive();
   }
 
 }

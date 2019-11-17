@@ -16,11 +16,13 @@ import { HomeComponent } from './layout/pages/home/home.component';
 import { TopFiveComponent } from './layout/pages/top-five/top-five.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MoviesService} from './service/movies.service';
-import {MatGridListModule} from '@angular/material';
+import {MatCardModule, MatDatepickerModule, MatGridListModule, MatInputModule, MatNativeDateModule} from '@angular/material';
 import {HomeMovieSelected} from './observable/homeMovieSelected';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { ListMoviesComponent } from './layout/pages/home/list-movies/list-movies.component';
 import { InfoMovieComponent } from './layout/pages/home/info-movie/info-movie.component';
+import { MovieItemComponent } from './layout/pages/home/movie-item/movie-item.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { InfoMovieComponent } from './layout/pages/home/info-movie/info-movie.co
     HomeComponent,
     TopFiveComponent,
     ListMoviesComponent,
-    InfoMovieComponent
+    InfoMovieComponent,
+    MovieItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,14 @@ import { InfoMovieComponent } from './layout/pages/home/info-movie/info-movie.co
     MatListModule,
     HttpClientModule,
     MatGridListModule,
+    MatCardModule,
     ScrollingModule,
+    MatListModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [
     MoviesService,

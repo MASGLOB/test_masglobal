@@ -13,15 +13,20 @@ export class ListMoviesComponent implements OnInit {
 
   constructor(
     private movieService: MoviesService,
-    private homeMovieSelected: HomeMovieSelected
+    private homeMovieSelected: HomeMovieSelected,
   ) { }
 
   ngOnInit() {
     this.loadMovies();
   }
 
-  loadMovies() {
+  async loadMovies() {
     this.movies = this.movieService.listMovies();
+    if (this.movies.length === 0) {
+      const mar = await this.movieService.getTopFive() as Movie[];
+      this.movies = [...mar, ...mar, ...mar, ...mar, ...mar];
+      console.log('movies', this.movies);
+    }
     this.setFirstMovie();
   }
 

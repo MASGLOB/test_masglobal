@@ -1,6 +1,6 @@
 # Movieapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+This test project from **Jose luis Quevedo** to **MASGLOBAL** was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
 ## Development server
 

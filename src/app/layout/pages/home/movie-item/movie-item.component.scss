@@ -1,0 +1,16 @@
+mat-card {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: gainsboro;
+}
+
+mat-card mat-card-header {
+  text-align: left;
+  cursor: pointer;
+}
+
+mat-card mat-card-header mat-card-title {
+  color: blue;
+  text-align: left;
+  width: 100%;
+}
