@@ -4,6 +4,7 @@ import {LocalStorageMisc} from '../utilities/localStorageMisc';
 import {HttpClient} from '@angular/common/http';
 import {MovieConst} from '../const/movieConst';
 import {timeout} from 'rxjs/operators';
+import {del} from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -46,5 +47,14 @@ export class MoviesService {
   async getTopFive() {
     const objTop = await this.http.get(MovieConst.topFiveUrl).pipe(timeout(MovieConst.timeOut)).toPromise();
     return Object.values(objTop)[0];
+  }
+
+  deleteMovie(title: string) {
+    const movies: Movie[] = this.getMovies();
+    const delIndx = movies.findIndex(m => m.title === title);
+    if (delIndx >= 0) {
+      movies.splice(delIndx, 1);
+    }
+    LocalStorageMisc.setStorage('movies', movies);
   }
 }

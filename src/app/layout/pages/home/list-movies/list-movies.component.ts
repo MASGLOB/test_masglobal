@@ -24,7 +24,7 @@ export class ListMoviesComponent implements OnInit {
     this.movies = this.movieService.listMovies();
     if (this.movies.length === 0) {
       const mar = await this.movieService.getTopFive() as Movie[];
-      this.movies = [...mar, ...mar, ...mar, ...mar, ...mar];
+      this.movies = mar;
       console.log('movies', this.movies);
     }
     this.setFirstMovie();
@@ -38,6 +38,11 @@ export class ListMoviesComponent implements OnInit {
 
   selectMovie(movie: Movie) {
     this.homeMovieSelected.selectMovie(movie);
+  }
+
+  delMovie(title) {
+    this.movieService.deleteMovie(title);
+    this.loadMovies();
   }
 
 }
