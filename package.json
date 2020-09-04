@@ -25,7 +25,7 @@
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1",
-    "simple-crypto-js": "^2.2.0"
+    "simple-crypto-js": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",
